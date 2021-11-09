@@ -1,3 +1,4 @@
+//go:build ignore
 // +build ignore
 
 package tuntap
@@ -15,14 +16,14 @@ import "C"
 const (
 	flagTruncated = C.TUN_PKT_STRIP
 
-	iffTun = C.IFF_TUN
-	iffTap = C.IFF_TAP
-	iffnopi = C.IFF_NO_PI
+	iffTun      = C.IFF_TUN
+	iffTap      = C.IFF_TAP
+	iffnopi     = C.IFF_NO_PI
 	iffOneQueue = C.IFF_ONE_QUEUE
 )
 
 type ifReq struct {
-	Name [C.IFNAMSIZ]byte
+	Name  [C.IFNAMSIZ]byte
 	Flags uint16
-	pad [C.IFREQ_SIZE-C.IFNAMSIZ-2]byte
+	pad   [C.IFREQ_SIZE - C.IFNAMSIZ - 2]byte
 }

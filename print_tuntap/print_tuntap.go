@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/lab11/go-tuntap/tuntap"
+	"go-tuntap/tuntap"
 )
 
 func main() {
